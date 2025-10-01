@@ -96,13 +96,13 @@ Publish the website in the given URL.
   <h2 > Power Of Incandescent Bulb</h2>
   <div id="it">
     <label style="font-size: 40px ;"><b>Intensity:<b></label>
-    <input type="text" style="font-size: 40px; font-style:italic;" placeholder="Enter value" id="inten" name="intensity" value={{i}}>
+    <input type="text" style="font-size: 40px; font-style:italic;" placeholder="Enter value" id="inten" name="intensity" >
 
   </div>
   <br>
   <div id="re">
     <label style="font-size: 40px;"><b>Resistance:<b></label>
-      <input style="font-size: 40px; font-style:italic;" type="text" placeholder="Enter Value" id="resis" name="resistance" value={{r}}>
+      <input style="font-size: 40px; font-style:italic;" type="text" placeholder="Enter Value" id="resis" name="resistance" >
 
   </div>
   <br>
@@ -117,12 +117,16 @@ Publish the website in the given URL.
   </form>
   {% if result == "Invalid input or No input was Given" %}
   <h3>Error :{{result}} </h3>
+
+  {% elif result == None %}
+    <h3></h3>
     
   {% else %}
     <h3>Power of The Bulb is :{{result}} W</h3>
   {% endif %}
 </body>
 </html>
+
 
 
 
