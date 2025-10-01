@@ -29,6 +29,7 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 # PROGRAM :
+'''
 
 <h1>serverprocess.html</h1>
 
@@ -126,7 +127,12 @@ Publish the website in the given URL.
 
 
 ```
+
+
 <h1>views.py</h1>
+
+
+
 ```
 from django.shortcuts import render
 
@@ -151,14 +157,30 @@ def power(request):
 
 ```
 
+<h1>urls.py</h1>
+
+```
+from django.contrib import admin
+from django.urls import path
+from pi2r.views import power
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',power),
+]
+
+```
+
+'''
 
 # SERVER SIDE PROCESSING:
 
+![alt text](<Screenshot 2025-10-01 154551.png>)
 
 
 # HOMEPAGE:
 
-
+![alt text](<Screenshot 2025-10-01 140525.png>)
 
 # RESULT:
 The program for performing server side processing is completed successfully.
